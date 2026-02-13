@@ -8,7 +8,7 @@ html {
     font-size: 12pt;
 
     --textwhite: white;
-    --bgblack: black;
+    --bgblack: rgb(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -16,6 +16,10 @@ h1 {
     margin: .5rem 0;
     line-height: 1.1;
     font-weight: normal;
+}
+
+.info {
+    position: relative;
 }
 
 .picture__image {
@@ -30,7 +34,7 @@ h1 {
 }
 
 .picture__link {
-    
+    display: block;
 }
 
 .info__text {
@@ -38,4 +42,31 @@ h1 {
     color: var(--textwhite);
     background-color: var(--bgblack);
     font-weight: bold;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+}
+
+.info:hover .info__text {
+    display: block;
+}
+
+.info::before {
+    content: "i";
+    display: block;
+    font-size: 2em;
+    background-color: #404004;
+    color: yellow;
+    border-style: solid;
+    height: 1.2em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0.5em;
+    text-align: center;
+    line-height: 1em;
 }
