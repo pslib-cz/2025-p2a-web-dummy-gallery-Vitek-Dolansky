@@ -58,7 +58,7 @@ h1 {
     display: block;
     font-size: 2em;
     background-color: #404004;
-    color: yellow;
+    color: olive;
     border-style: solid;
     height: 1.2em;
     aspect-ratio: 1 / 1;
@@ -69,4 +69,8 @@ h1 {
     margin: 0.5em;
     text-align: center;
     line-height: 1em;
+}
+
+.info:hover::before {
+    color: yellow;
 }
