@@ -74,3 +74,27 @@ h1 {
 .info:hover::before {
     color: yellow;
 }
+
+@media screen and (min-width: 620px) {
+    .thumbnails {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5em
+        
+    }
+
+    .thumbnails::after {
+        content: "";
+        display: block;
+        flex-grow: 100;
+    }
+
+    .thumbnails__item {
+        height: 150px;
+        flex-grow: 1;
+    }
+
+    .picture__link {
+        height: 100%;
+    }
+}
