@@ -77,22 +77,26 @@ h1 {
 
 @media screen and (min-width: 620px) {
     .thumbnails {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 0.5em;
+        /* display: flex; 
         flex-wrap: wrap;
-        gap: .5em
-        
+        gap: .5em;
+        flex-direction: column;
+        height: calc(100dvh - 60px);*/
     }
 
     .thumbnails::after {
-        content: "";
+        /* content: "";
         display: block;
-        flex-grow: 100;
+        flex-grow: 100; */
     }
 
     .thumbnails__item {
-        height: 150px;
+        /* height: 150px;
         flex-grow: 1;
-        flex-basis: 15%;
+        flex-basis: 15%; */
     }
 
     .picture__link {
